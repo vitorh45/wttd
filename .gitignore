@@ -3,7 +3,7 @@ build
 include
 lib
 *.pyc
-*.sqlite
+*.sqlite3
 local
 man
 .env
