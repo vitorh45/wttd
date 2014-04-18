@@ -6,4 +6,5 @@ lib
 *.sqlite
 local
 man
-
+.env
+eventex/staticfiles
