@@ -25,6 +25,10 @@ class SubscriptionTest(TestCase):
 	def test_unicode(self):
 		self.assertEqual(u'Vitor Hugo Campos', unicode(self.obj))
 
+	def test_paid_default_value_is_False(self):
+		'By default paid must be False.'
+		self.assertEqual(False, self.obj.paid)
+
 class SubscriptionUniqueTest(TestCase):
 	def setUp(self):
 		# Create a first entry to force the collision
@@ -42,5 +46,7 @@ class SubscriptionUniqueTest(TestCase):
 		s = Subscription(name='Vitor Hugo Campos', cpf='00000000011',
 		email='vitorh45@gmail.com', phone='19-99350909')
 		self.assertRaises(IntegrityError, s.save)
+
+
 
 	

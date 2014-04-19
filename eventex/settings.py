@@ -27,8 +27,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #local apps
     'eventex.core',
     'eventex.subscriptions',
+    #external apps
+    'south',
     
 )
 
@@ -74,3 +77,5 @@ USE_TZ = True
 
 STATIC_ROOT = BASE_DIR.child('staticfiles')
 STATIC_URL = '/static/'
+
+SOUTH_TESTS_MIGRATE = False
